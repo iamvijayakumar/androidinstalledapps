@@ -33,11 +33,11 @@ public class MainActivity extends Activity {
 			appStructure.appIcons = packInfo.applicationInfo.loadIcon(getPackageManager());
 			appStructurelist.add(appStructure);
 			Log.e("error", "" + appStructure.appName);
-			InstalledAppAdapter adapter = new InstalledAppAdapter(this,
-					appStructurelist);
-
-			gridView.setAdapter(adapter);
+			
 
 		}
+		InstalledAppAdapter adapter = new InstalledAppAdapter(this,
+				appStructurelist);
+		gridView.setAdapter(adapter);
 	}
 }
